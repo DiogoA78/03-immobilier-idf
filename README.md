@@ -73,7 +73,7 @@ streamlit run app/streamlit_app.py
 
 ## 📊 Démo live
 
-> [🔗 Voir l'app sur Streamlit Cloud](URL_STREAMLIT)
+> [🔗 Voir l'app sur Streamlit Cloud](https://diogoa78-07-demonstrateur-hsrfdt8xqoiobofkvqmaqd.streamlit.app/)
 
 ## 📄 Source des données
 
