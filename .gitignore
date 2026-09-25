@@ -1,0 +1,163 @@
+# ============================================
+# .gitignore — Portfolio Data Science Projects
+# Template réutilisable pour les 6 repos
+# ============================================
+
+# ──────────────────────────────────────────────
+# 🔒 SÉCURITÉ — Fichiers sensibles
+# ──────────────────────────────────────────────
+
+# Variables d'environnement / secrets
+.env
+.env.*
+*.env
+secrets.yaml
+secrets.json
+config.local.*
+
+# Clés API, tokens, credentials
+**/credentials/
+**/keys/
+*.pem
+*.key
+*.p12
+
+# ──────────────────────────────────────────────
+# 📊 DONNÉES — Ne jamais commiter de data brute
+# ──────────────────────────────────────────────
+
+# Données brutes et intermédiaires
+data/raw/
+data/interim/
+data/processed/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.xlsx
+*.xls
+*.json
+!package.json
+!package-lock.json
+*.db
+*.sqlite
+*.sql.gz
+
+# Exceptions : garder les petits fichiers de config/sample
+!data/sample/*.csv
+!data/README.md
+
+# ──────────────────────────────────────────────
+# 🤖 MODÈLES — Fichiers volumineux
+# ──────────────────────────────────────────────
+
+# Modèles entraînés
+models/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+
+# Cache Hugging Face / Transformers
+.cache/
+transformers_cache/
+
+# ──────────────────────────────────────────────
+# 🐍 PYTHON
+# ──────────────────────────────────────────────
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Package managers
+.uv/
+uv.lock
+pip-log.txt
+
+# ──────────────────────────────────────────────
+# 📓 JUPYTER NOTEBOOKS
+# ──────────────────────────────────────────────
+
+# Checkpoints
+.ipynb_checkpoints/
+
+# nbstripout (si utilisé pour nettoyer les outputs)
+# Voir section "Notebooks" dans SECURITY.md
+
+# ──────────────────────────────────────────────
+# 📊 OUTILS BI
+# ──────────────────────────────────────────────
+
+# Power BI (fichiers volumineux, contiennent parfois des données)
+# ⚠️ Commiter uniquement le .pbix SANS données importées
+# Exporter les captures d'écran dans assets/ à la place
+*.pbit
+*.pbids
+
+# Tableau
+# ⚠️ Le .twbx contient les données — ne commiter que le .twb (sans données)
+*.twbx
+*.tde
+*.hyper
+
+# ──────────────────────────────────────────────
+# 💻 OS & IDE
+# ──────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+
+# ──────────────────────────────────────────────
+# 📦 DIVERS
+# ──────────────────────────────────────────────
+
+# Logs
+*.log
+logs/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
