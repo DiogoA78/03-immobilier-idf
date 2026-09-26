@@ -1,6 +1,8 @@
-# 🏠 Prix immobiliers en Île-de-France — Analyse géospatiale & prédiction
+🇫🇷 [Version française](README_FR.md)
 
-> Du data.gouv.fr au modèle de prédiction : combiner analyse géospatiale et Machine Learning pour estimer les prix au m².
+# 🏠 Real Estate Prices in Île-de-France — Geospatial Analysis & Prediction
+
+> From data.gouv.fr to a prediction model: combining geospatial analysis and Machine Learning to estimate prices per m².
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?logo=scikitlearn&logoColor=white)
@@ -9,32 +11,33 @@
 
 ---
 
-## 📋 Contexte
+## 📋 Context
 
-Les données DVF (Demandes de Valeurs Foncières) rendent publiques toutes les transactions immobilières en France. Ce projet exploite ces données pour mener une double analyse : d'abord comprendre les dynamiques de prix en Île-de-France, puis construire un modèle prédictif capable d'estimer le prix d'un bien à partir de ses caractéristiques.
+DVF data (Demandes de Valeurs Foncières) makes all real estate transactions in France publicly available. This project leverages this data for a dual analysis: first understanding price dynamics in the Île-de-France region, then building a predictive model capable of estimating a property's price based on its characteristics.
 
-## 🎯 Objectifs
+## 🎯 Objectives
 
-- Cartographier les prix médians au m² par commune en Île-de-France
-- Identifier les micro-marchés et les facteurs de prix
-- Construire un modèle ML de prédiction de prix (XGBoost)
-- Déployer une app Streamlit interactive : carte + prédicteur
+- Map median prices per m² by municipality in Île-de-France
+- Identify micro-markets and price drivers
+- Build an ML price prediction model (XGBoost)
+- Deploy an interactive Streamlit app: map + predictor
 
-## 🔧 Stack technique
+## 🔧 Tech Stack
 
-| Outil | Usage |
-|-------|-------|
-| **Python 3.10+** | Langage principal |
-| **Pandas / GeoPandas** | Manipulation et données géospatiales |
-| **Scikit-learn / XGBoost** | Modélisation prédictive |
-| **Plotly / Folium** | Visualisations et cartes |
-| **Streamlit** | App interactive |
+| Tool | Usage |
+|------|-------|
+| **Python 3.10+** | Main language |
+| **Pandas / GeoPandas** | Data manipulation and geospatial data |
+| **Scikit-learn / XGBoost** | Predictive modeling |
+| **Plotly / Folium** | Visualizations and maps |
+| **Streamlit** | Interactive app |
 
-## 📁 Structure du projet
+## 📁 Project Structure
 
 ```
 03-immobilier-idf/
-├── README.md
+├── README.md                          ← This file
+├── README_FR.md                       ← French version
 ├── requirements.txt
 ├── .gitignore
 ├── LICENSE
@@ -49,13 +52,13 @@ Les données DVF (Demandes de Valeurs Foncières) rendent publiques toutes les t
 │   └── 02_modelisation.ipynb
 ├── app/
 │   └── streamlit_app.py
-├── models/                     ← Gitignored
+├── models/                            ← Gitignored
 ├── assets/
 └── scripts/
     └── security_check.sh
 ```
 
-## 🚀 Démarrage rapide
+## 🚀 Quick Start
 
 ```bash
 git clone https://github.com/DiogoA78/03-immobilier-idf.git
@@ -65,23 +68,23 @@ python data/download_data.py
 jupyter notebook notebooks/01_eda_geospatiale.ipynb
 ```
 
-### Lancer l'app Streamlit
+### Launch the Streamlit app
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-## 📊 Démo live
+## 📊 Live Demo
 
-> [🔗 Voir l'app sur Streamlit Cloud](https://diogoa78-07-demonstrateur-hsrfdt8xqoiobofkvqmaqd.streamlit.app/)
+> [🔗 View the app on Streamlit Cloud](https://diogoa78-07-demonstrateur-hsrfdt8xqoiobofkvqmaqd.streamlit.app/)
 
-## 📄 Source des données
+## 📄 Data Source
 
-- **DVF — Demandes de Valeurs Foncières**
-- Éditeur : DGFiP (Direction Générale des Finances Publiques)
-- Licence : Licence Ouverte
-- URL : [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/)
+- **DVF — Demandes de Valeurs Foncières** (Property Value Requests)
+- Publisher: DGFiP (French Directorate General of Public Finances)
+- License: Open Licence
+- URL: [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/)
 
-## 📜 Licence
+## 📜 License
 
-MIT — voir [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
